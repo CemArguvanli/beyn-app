@@ -1,0 +1,108 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  /*background: url("../images/body.jpg") repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;*/
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  /* Make the masthead heading the same height as the navigation */
+}
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+.header .navbar-default {
+  border: 0;
+  border-radius: 0;
+}
+
+.poject-header {
+  margin-top: 30px;
+}
+.poject-header img {
+  width: 100%;
+}
+
+section.blog-post {
+  margin-top: 50px;
+}
+
+.post-content-body {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 50px;
+}
+
+.beyn-continue {
+  min-width: 150px;
+}
+
+#about {
+  margin-top: 45px !important;
+  background: url("../images/about.jpg") repeat scroll 0 0/100% 100% transparent;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 85px;
+  padding-top: 85px;
+  margin: 0 auto;
+  margin-right: -15px !important;
+  margin-left: -15px !important;
+}
+
+.about {
+  color: #fff;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1170px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: -20px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
