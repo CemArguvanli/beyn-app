@@ -1,9 +1,17 @@
 'use strict';
 
+/**
+ * main : This is the main module
+ *
+ */
 mediator.module('main', function () {
 
 	var newUser = null;
 
+	/**
+	* setUserValues is a method to set values getting an instance of User model
+	* @param N/A
+	*/
 	var setUserValues = function(){
 		var userName = MODULES['config'].el.name.val();
 		var userSurName = MODULES['config'].el.surName.val();
@@ -12,6 +20,10 @@ mediator.module('main', function () {
 		newUser = new User(userName, userSurName, userEmail, userPassword);
 	}
 
+	/**
+	* initCustomScripts is a method to make a user registered to the application
+	* @param N/A
+	*/
 	var register = function(){
 		MODULES['utils']['doRequest'](MODULES['config'].AJAX.METHODS.post, MODULES['config'].URLS.register, {user : newUser}, MODULES['config'].DATA_TYPES.json, function (message) {
 			console.log(message);
@@ -24,8 +36,13 @@ mediator.module('main', function () {
 		});
 	};
 
+	/**
+	* login is the a method to make a user login
+	* @param <String> email
+	* @param <String> password
+	*/
 	var login = function(email, password){
-		var userLoginEmail = MODULES['config'].el.loginEmail.val(); 
+		var userLoginEmail = MODULES['config'].el.loginEmail.val();
 		var userLoginPassword = MODULES['config'].el.loginPassword.val();
 		var localUser = MODULES.utils.getLocalItem('newUser');
 		if (localUser.email === userLoginEmail && localUser.password === userLoginPassword) {
@@ -38,15 +55,43 @@ mediator.module('main', function () {
 		}
 	};
 
+	/**
+	* hideRegisterAndLoginButton is a method to make register button dissappear
+	* @param N/A
+	*/
 	var hideRegisterAndLoginButton = function(){
 		$(MODULES.config.el.loginAndRegisterModalButton).hide();
 		$(MODULES.config.el.loginModalHide).modal('toggle');
 	}
 
-	var welcomeUserInfo = function(){
+	/**
+	* emptyWelcomeUserInfo is a method to make the user info empitied
+	* @param N/A
+	*/
+	var emptyWelcomeUserInfo = function(){
 		$(MODULES.config.el.welcomeUserInfo).html("");
 	}
 
+	/**
+	* hideLoginModalButton is a method to make login button dissappear
+	* @param N/A
+	*/
+	var hideLoginModalButton = function(){
+		$(MODULES.config.el.loginModalButton).hide();
+	}
+
+	/**
+	* hideRegisterModalButton is a method to make register button dissappear
+	* @param N/A
+	*/
+	var hideRegisterModalButton = function(){
+		$(MODULES.config.el.registerModalButton).hide();
+	}
+
+	/**
+	* init is a method to initialize scripts of this module
+	* @param <String> name
+	*/
 	var init = function (){
 		var newUser = null;
 		app.bindEvents();

@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * config : This is the config module
+ *
+ */
 mediator.module('config', function () {
 	return {
 		el : {
