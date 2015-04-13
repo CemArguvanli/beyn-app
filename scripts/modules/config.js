@@ -11,7 +11,9 @@ mediator.module('config', function () {
 			loginEmail : $("#loginemail"),
 			loginPassword : $("#loginpassword"),
 			loginButton : $("#loginbutton"),
-			loginAndRegisterModalButton : $("#userRegLogin")
+			loginAndRegisterModalButton : $("#userRegLogin"),
+			loginModalHide : $(".login-modal"),
+			welcomeUserInfo : $("#welcomeUserInfo")
 		},
 		URLS : {
 			sendUser : '/send/'

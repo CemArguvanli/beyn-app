@@ -40,6 +40,11 @@ mediator.module('main', function () {
 
 	var hideRegisterAndLoginButton = function(){
 		$(MODULES.config.el.loginAndRegisterModalButton).hide();
+		$(MODULES.config.el.loginModalHide).modal('toggle');
+	}
+
+	var welcomeUserInfo = function(){
+		$(MODULES.config.el.welcomeUserInfo).html("");
 	}
 
 	var init = function (){
@@ -53,6 +58,7 @@ mediator.module('main', function () {
 			register : register,
 			login : login,
 			hideRegisterAndLoginButton : hideRegisterAndLoginButton,
+			welcomeUserInfo : welcomeUserInfo,
 			init : init
 		}
 	})();
