@@ -59,31 +59,63 @@
         </div>
       </div>
 
-      <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+      <div class="modal fade registration-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="gridSystemModalLabel">User Registration</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="login">
+                    <form action="#" method="POST" role="form">
+
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="surname" placeholder="Sur Name">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                      </div>
+
+                    </form>
+                  </div>                    
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="register" type="button" class="btn btn-primary">Register</button>
               </div>
-              <div class="modal-body">
-                <div class="login">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>                    
-              </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
-      </div>
 
+
+        <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="gridSystemModalLabel">User Login</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="login">
+                    <form action="#" method="POST" role="form">
+
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="loginemail" placeholder="E-mail">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="loginpassword" placeholder="Password">
+                      </div>
 
       <section>
         <div class="row">
