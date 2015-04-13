@@ -32,19 +32,14 @@ mediator.module('main', function () {
 			MODULES.utils.setCookie('userLoginEmail', userLoginEmail);
 			MODULES.utils.setCookie('userLoginPassword', userLoginPassword);
 			console.log(MODULES.config.MESSAGES.LOGIN_SUCCESS);
-			MODULES.main.hideLoginModalButton();
-			MODULES.main.hideRegisterModalButton();
+			MODULES.main.hideRegisterAndLoginButton();
 		} else {
 			console.error(MODULES.config.MESSAGES.LOGIN_ERROR);
 		}
 	};
 
-	var hideLoginModalButton = function(){
-		$(MODULES.config.el.loginModalButton).hide();
-	}
-
-	var hideRegisterModalButton = function(){
-		$(MODULES.config.el.registerModalButton).hide();
+	var hideRegisterAndLoginButton = function(){
+		$(MODULES.config.el.loginAndRegisterModalButton).hide();
 	}
 
 	var init = function (){
@@ -57,8 +52,7 @@ mediator.module('main', function () {
 			setUserValues : setUserValues,
 			register : register,
 			login : login,
-			hideLoginModalButton : hideLoginModalButton,
-			hideRegisterModalButton : hideRegisterModalButton,
+			hideRegisterAndLoginButton : hideRegisterAndLoginButton,
 			init : init
 		}
 	})();
